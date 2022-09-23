@@ -38,7 +38,7 @@ My challenge was to have hand on experience of how async/await methodology in ja
 ### Links
 
 - Solution URL: https://github.com/Danities316/currency-converter-js
-- Live Site URL: https://shrouded-mesa-22373.herokuapp.com/
+- Live Site URL: https://fast-chamber-21399.herokuapp.com/ 
 
 ## My process
 - I used googleapis for the font by @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
