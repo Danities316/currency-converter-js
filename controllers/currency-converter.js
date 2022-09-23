@@ -1,7 +1,7 @@
 const axios = require('axios');
 const express = require('express');
 
-
+require('dotenv').config();
 //GetExchangeRate
 const getExchangeRate = async (fromCurrency, toCurrency) =>{
     try {
@@ -15,7 +15,7 @@ const getExchangeRate = async (fromCurrency, toCurrency) =>{
     // console.log(exchangeRate)
     //Manages Errors messages
     if(isNaN(exchangeRate)){
-        throw new Error(`Unable to get ${fromCurrency} as base currency for ${toCurrency}`)
+        throw new Error(`${fromCurrency} Must be a number to get ${toCurrency} currency`)
     }
     return exchangeRate
         
@@ -60,7 +60,7 @@ const convertedCurrency = (req, res) =>{
     convertCurrency(toCurrency, fromCurrency, amount)
     .then((message) => {
         const exchangeRate =  getExchangeRate(fromCurrency, toCurrency)
-        console.log(res.statusCode)
+        // console.log(res.statusCode)
     res.render('convertedCurrency', {
        data: message
 
